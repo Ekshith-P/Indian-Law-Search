@@ -1,4 +1,5 @@
 =======
+
 # Indian Law Search 🔍⚖️
 
 A comprehensive legal search engine for Indian laws, judgments, and legal resources with a modern dark mode interface inspired by Brave Search.
@@ -281,4 +282,5 @@ For support and questions:
 ---
 
 **Built with ❤️ for the Indian legal community**
->>>>>>> d3676ca (Final Draft)
+
+> > > > > > > d3676ca (Final Draft)

@@ -99,13 +99,11 @@ const EnhancedSearch = () => {
       setLoading(true);
       saveSearchHistory(query);
 
-      const response = await axios.get(
-        `${API_BASE_URL}/api/issue-search?q=${encodeURIComponent(
-          query
-        )}&limit=30`
-      );
+      const response = await axios.post(`${API_BASE_URL}/api/issue-search`, {
+        query: query,
+      });
       console.log("✅ Search response:", response.data);
-      setSearchResults(response.data);
+      setSearchResults(response.data.results);
       setSuggestions([]);
     } catch (error) {
       console.error("❌ Search failed:", error);
@@ -203,15 +201,15 @@ const EnhancedSearch = () => {
   };
 
   const getTabCount = (type) => {
-    if (!searchResults) return 0;
+    if (!searchResults || !searchResults.categorized_results) return 0;
 
     switch (type) {
       case "legislation":
-        return searchResults.categorized_results.legislation.length;
+        return searchResults.categorized_results.legislation?.length || 0;
       case "judgments":
-        return searchResults.categorized_results.judgments.length;
+        return searchResults.categorized_results.judgments?.length || 0;
       case "kanoon":
-        return searchResults.categorized_results.kanoon_results.length;
+        return searchResults.categorized_results.kanoon_results?.length || 0;
       default:
         return 0;
     }
@@ -325,12 +323,12 @@ const EnhancedSearch = () => {
   };
 
   const renderTabContent = () => {
-    if (!searchResults) return null;
+    if (!searchResults || !searchResults.categorized_results) return null;
 
     switch (activeTab) {
       case "legislation":
         const filteredLegislation = filterResults(
-          searchResults.categorized_results.legislation,
+          searchResults.categorized_results.legislation || [],
           "legislation"
         );
         return (
@@ -347,7 +345,7 @@ const EnhancedSearch = () => {
 
       case "judgments":
         const filteredJudgments = filterResults(
-          searchResults.categorized_results.judgments,
+          searchResults.categorized_results.judgments || [],
           "judgments"
         );
         return (
@@ -364,7 +362,7 @@ const EnhancedSearch = () => {
 
       case "kanoon":
         const filteredKanoon = filterResults(
-          searchResults.categorized_results.kanoon_results,
+          searchResults.categorized_results.kanoon_results || [],
           "kanoon"
         );
         return (
