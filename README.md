@@ -30,10 +30,10 @@ A comprehensive legal search engine for Indian laws, judgments, and legal resour
 
 ##  Testing Results
 
-✅ **100% Success Rate** - All 21 test queries passed  
-⏱️ **4ms Average Response Time** - Lightning-fast search  
-🏛️ **Supreme Court Priority** - SC results rank higher than HC  
-📈 **Comprehensive Coverage** - Multiple court types and legal sources
+ **100% Success Rate** - All 21 test queries passed  
+ **4ms Average Response Time** - Lightning-fast search  
+ **Supreme Court Priority** - SC results rank higher than HC  
+ **Comprehensive Coverage** - Multiple court types and legal sources
 
 ##  Technology Stack
 
@@ -282,5 +282,3 @@ For support and questions:
 ---
 
 **Built with ❤️ for the Indian legal community**
-
-> > > > > > > d3676ca (Final Draft)
