@@ -1,10 +1,10 @@
 =======
 
-# Indian Law Search 🔍⚖️
+# Indian Law Search 
 
 A comprehensive legal search engine for Indian laws, judgments, and legal resources with a modern dark mode interface inspired by Brave Search.
 
-## 🚀 Features
+##  Features
 
 ### Core Functionality
 
@@ -28,14 +28,14 @@ A comprehensive legal search engine for Indian laws, judgments, and legal resour
 - **Legislation**: Constitutional articles, IPC, CrPC, and more
 - **External Integration**: Indian Kanoon search results
 
-## 📊 Testing Results
+##  Testing Results
 
 ✅ **100% Success Rate** - All 21 test queries passed  
 ⏱️ **4ms Average Response Time** - Lightning-fast search  
 🏛️ **Supreme Court Priority** - SC results rank higher than HC  
 📈 **Comprehensive Coverage** - Multiple court types and legal sources
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Frontend
 
@@ -59,7 +59,7 @@ A comprehensive legal search engine for Indian laws, judgments, and legal resour
 - **Vercel** - Frontend deployment
 - **Render/Cloud Run** - Backend deployment
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -118,7 +118,7 @@ A comprehensive legal search engine for Indian laws, judgments, and legal resour
    - Frontend: http://localhost:3000
    - Backend: http://localhost:3001
 
-## 🧪 Testing
+##  Testing
 
 Run comprehensive tests to verify functionality:
 
@@ -137,7 +137,7 @@ node test-search-queries.js
 - **Ranking Verification** - SC > HC priority
 - **Error Handling** - Robust error management
 
-## 🌐 Deployment
+##  Deployment
 
 ### Frontend (Vercel)
 
@@ -165,10 +165,10 @@ node test-search-queries.js
    docker push gcr.io/your-project/indian-law-backend
 
    # Deploy to Cloud Run
-   gcloud run deploy indian-law-backend \
-     --image gcr.io/your-project/indian-law-backend \
-     --platform managed \
-     --region us-central1 \
+   gcloud run deploy indian-law-backend 
+     --image gcr.io/your-project/indian-law-backend 
+     --platform managed 
+     --region us-central1 
      --allow-unauthenticated
    ```
 
@@ -188,7 +188,7 @@ CORS_ORIGIN=https://your-frontend-domain.vercel.app
 REACT_APP_API_URL=https://your-backend-url.onrender.com
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 indian-law-search/
@@ -210,7 +210,7 @@ indian-law-search/
 └── README.md
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Search Filters
 
@@ -225,7 +225,7 @@ indian-law-search/
 - `GET /api/kanoon-search/{query}` - External search
 - `GET /health` - Health check
 
-## 🎨 UI Features
+##  UI Features
 
 ### Dark Mode Design
 
@@ -241,21 +241,21 @@ indian-law-search/
 - **History**: Persistent search history
 - **Filters**: Real-time result filtering
 
-## 📈 Performance
+##  Performance
 
 - **Response Time**: < 5ms average
 - **Success Rate**: 100% test coverage
 - **Uptime**: 99.9% with health checks
 - **Scalability**: Containerized for easy scaling
 
-## 🔒 Security
+##  Security
 
 - **CORS Configuration**: Proper origin validation
 - **Input Sanitization**: XSS protection
 - **Rate Limiting**: API abuse prevention
 - **Security Headers**: Comprehensive protection
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -263,15 +263,15 @@ indian-law-search/
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⚖️ Legal Disclaimer
+## Legal Disclaimer
 
 This application is for informational purposes only and does not constitute legal advice. All legal information is sourced from official court websites and should be verified independently.
 
-## 🆘 Support
+## Support
 
 For support and questions:
 
